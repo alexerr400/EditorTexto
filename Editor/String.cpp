@@ -1,4 +1,5 @@
 #include "String.h"
+#include <stdlib.h>
 
 char* a;
 unsigned int tamanho;
@@ -6,7 +7,7 @@ unsigned int tamanho;
 String::String(unsigned int tam)
 {
     a = (char*)malloc(tamanho * sizeof(char)); // = a = new char(tamanho);
-    this->tamanho = tam;
+    tamanho = tam;
 }
 
 String::~String()
@@ -15,83 +16,89 @@ String::~String()
 
 }
 
-char charAt(unsigned int posicao) {
+char String::charAt(unsigned int posicao) {
     return *(a + posicao);
 }
 
 
-bool operator < (String str){
-    if (tamanho < str->getTamanho())
+bool String::operator< (String str){
+    if (tamanho < str.getTamanho())
         return true;
     return false;
 }
-bool operator <= (String str){
-    if (tamanho <= str->getTamanho())
+bool String::operator<= (String str){
+    if (tamanho <= str.getTamanho())
         return true;
     return false;
 }
-bool operator > (String str){
-    if (tamanho > str->getTamanho())
+bool String::operator>(String str){
+    if (tamanho > str.getTamanho())
         return true;
     return false;
 }
-bool operator >= (String str){
-    if (tamanho >= str->getTamanho())
+bool String::operator>= (String str){
+    if (tamanho >= str.getTamanho())
         return true;
     return false;
 }
-bool operator == (String str){
-    if (tamanho == str->getTamanho())
+bool String::operator== (String str){
+    if (tamanho == str.getTamanho())
         return true;
     return false;
 }
-bool operator != (String str){
-    if (tamanho != str->getTamanho())
+bool String::operator!= (String str){
+    if (tamanho != str.getTamanho())
         return true;
     return false;
 }
 
-String operator + (String mais) {
+String String::operator+ (String mais) {
     for (int i = 0; i < mais.getTamanho(); i++)
     {
-        inserir((quantos + i), mais.charAt(i));
+        inserir((tamanho + i), mais.charAt(i));
     }
-    return this;
+    return *this;
 }
 
-int length() {
-    return qtos;
+int String::length() {
+    return tamanho;
 }
 
-void append(char c){
-    // ????
+void String::append(char c){
+	tamanho++;
+	*(a + tamanho) = c;
 }
 
-void deletar(unsigned int posIni, unsigned int posFim){ // delete dava erro
-    for (int i = posIni; i < posFim; i++){
-        *(a + i).free; // ta errado
-    }
+
+
+void String::deletar(unsigned int posIni, unsigned int posFim){ // delete dava erro
+    for (int i = posIni; i < posFim; i++)
+		deleteCharAt(i);
+    
 }
 
-void deleteCharAt(unsigned int posicao) {
-    if (*(a + posicao) != NULL){
-        *(a + posicao).free; // esta errado
-    }
+void String::deleteCharAt(unsigned int posicao) {
+	if (*(a + posicao) == NULL)
+		throw "ERROU";
+	for (int i = posicao; i < tamanho; i++)
+		*(a + posicao) = *(a + posicao + 1);
+	tamanho--;
 }
 
-void inserir(unsigned int posicao, char oque){ // insert dava erro
-    if (*(a + posicao) != NULL)
-        throw new exception("Valor invalido") // ???
-    *(i + posicao) = oque;
+void String::inserir(unsigned int posicao, char oque){ // insert dava erro
+	if (*(a + posicao) != NULL)
+		throw "Valor invalido";
+    *(a + posicao) = oque;
 }
 
-void replacear(unsigned int posicao, char oque) { // replace dava erro
+void String::replacear(unsigned int posicao, char oque) { // replace dava erro
     if (*(a + posicao) == NULL)
-        throw new exception("Valor invalido") // ???
-    *(i + posicao) = oque;
+		throw "Valor invalido";
+    *(a + posicao) = oque;
+	tamanho++;
 }
 
-int getTamanho() {
-    return  tamanho;
+int String::getTamanho() {
+    return tamanho;
 }
 

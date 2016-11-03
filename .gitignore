@@ -1,0 +1,4 @@
+ipch/
+Debug/
+Editor/Debug/
+Editor/*.suo
