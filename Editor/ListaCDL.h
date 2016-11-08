@@ -4,7 +4,17 @@ class ListaCDL
 public:
 	ListaCDL();
 	~ListaCDL();
-	String *PosicaoAtual;
+	void insira(String linha); // na posicao atual
+	void insiraDepois(String linha); // da posicao atual
+	void remova(); // linha da posicao atual
+	void removaDepois(); // linha depois da posicao atual
+	void infoAtual(); // retorna o String do nó atual
+	void avance(); // avança circularmente a posicao atual
+	void retroceda(); // retrocede circularmente a posicao atual
+
+
+	//claro que vai precisar de um construtor de
+		//copia, operator= de cópia e de um destrutor
 
 
 };

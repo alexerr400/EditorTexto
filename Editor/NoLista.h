@@ -2,14 +2,13 @@
 class NoLista
 {
 public:
-	NoLista();
+	NoLista(String textoInfo);
 	~NoLista();
-	NoLista getinfoatual();
+	String getinfoatual();
 	NoLista getprox();
 	NoLista getanterior();
-	void setInfoAtual(NoLista no);
-	void setProx(NoLista no);
-	void setAnt(NoLista no);
+	void setInfoAtual(String linha);
+
 
 	
 };
