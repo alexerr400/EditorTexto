@@ -4,10 +4,10 @@
 #include "NoLista.h"
 
 
-NoLista *PosicaoAtual;
-ListaCDL::ListaCDL()
+ListaCDL::ListaCDL(NoLista primeiro)
 {
 	//fazer posicao atual receber primeiro no
+	*PosicaoAtual = primeiro;
 }
 
 
@@ -19,25 +19,26 @@ void Insira(String linha)// na posicao atual
 {
 	NoLista novo = NoLista(linha);
 	novo.getprox().setInfoAtual(PosicaoAtual->getinfoatual());
-	
+	*PosicaoAtual = novo;
 }
 
-void insiraDepois(String linha)
+void insiraDepois(String linha) // da posicao atual
 {
+	NoLista novo = NoLista(linha);
+	PosicaoAtual->getprox().setInfoAtual(linha);
+}
 
-} // da posicao atual
-
-void remova()
+void remova(String linha)
 {
-
+	PosicaoAtual->getanterior().setProx(PosicaoAtual->getprox());
 } // linha da posicao atual
 
-void removaDepois()
+void removaDepois(String linha)
 {
 
 } // linha depois da posicao atual
 
-void infoAtual()
+String infoAtual()
 {
 
 } // retorna o String do nó atual

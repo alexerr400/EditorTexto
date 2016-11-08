@@ -3,8 +3,8 @@
 #include "String.h"
 
 String info;
-NoLista ProxNo;
-NoLista NoAnt;
+NoLista *ProxNo;
+NoLista *NoAnt;
 NoLista::NoLista(String textoInfo)
 {
 	info = info;
@@ -35,6 +35,17 @@ NoLista getanterior()
 void setInfoAtual(String linha)
 {
 	info = linha;
+}
+
+void setProx(NoLista no)
+{
+
+}
+
+void setAnt(NoLista no)
+{
+
+}
 
 
 
