@@ -1,6 +1,11 @@
 #pragma once
+#include "stdafx.h"
+#include "String.h"
+#include "NoLista.h"
 class ListaCDL
 {
+protected:
+	NoLista *PosicaoAtual;
 public:
 	ListaCDL();
 	~ListaCDL();

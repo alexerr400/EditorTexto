@@ -2,9 +2,7 @@
 #include "NoLista.h"
 #include "String.h"
 
-String info;
-NoLista ProxNo;
-NoLista NoAnt;
+
 NoLista::NoLista(String textoInfo)
 {
 	info = info;
@@ -16,25 +14,30 @@ NoLista::~NoLista()
 	
 }
 
-String getinfoatual()
+String NoLista::getinfoatual()
 {
-	return info;
+	return this->info;
 }
 
 
-NoLista getprox()
+NoLista* NoLista::getProx()
 {
-	return ProxNo;
+	return proxNo;
 }
 
-NoLista getanterior()
+NoLista NoLista::getanterior()
 {
-	return NoAnt;
+	return *noAnt;
 }
 
-void setInfoAtual(String linha)
+void NoLista::setInfoAtual(String linha)
 {
 	info = linha;
+}
+
+void NoLista::setProx(NoLista *oq){
+	proxNo
+}
 
 
 

@@ -1,6 +1,8 @@
-#include "String.h"
 #include <stdlib.h>
 #include "stdafx.h"
+#include "String.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 
 String::String(unsigned int tam)
