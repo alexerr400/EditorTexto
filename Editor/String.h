@@ -4,6 +4,9 @@
 
 class String
 {
+protected:
+	char* a;
+	unsigned int tamanho;
 public:
 	String();
 	String::String(unsigned int tam);

@@ -1,13 +1,11 @@
 #include "String.h"
 #include <stdlib.h>
 
-char* a;
-unsigned int tamanho;
 
 String::String(unsigned int tam)
 {
+	tamanho = tam + 1;
     a = (char*)malloc(tamanho * sizeof(char)); // = a = new char(tamanho);
-    tamanho = tam;
 }
 
 String::~String()
@@ -32,8 +30,8 @@ bool String::operator<= (String str){
     return false;
 }
 bool String::operator>(String str){
-    if (tamanho > str.getTamanho())
-        return true;
+	if (tamanho > str.getTamanho())
+		return true;
     return false;
 }
 bool String::operator>= (String str){
@@ -65,7 +63,9 @@ int String::length() {
 }
 
 void String::append(char c){
-	tamanho++;
+	tamanho++; a = (char*)malloc(tamanho * sizeof(char)); 
+	a = (char*)malloc(tamanho * sizeof(char));
+
 	*(a + tamanho) = c;
 }
 
@@ -82,7 +82,7 @@ void String::deleteCharAt(unsigned int posicao) {
 		throw "ERROU";
 	for (int i = posicao; i < tamanho; i++)
 		*(a + posicao) = *(a + posicao + 1);
-	tamanho--;
+	tamanho--; a = (char*)malloc(tamanho * sizeof(char));
 }
 
 void String::inserir(unsigned int posicao, char oque){ // insert dava erro
@@ -95,7 +95,7 @@ void String::replacear(unsigned int posicao, char oque) { // replace dava erro
     if (*(a + posicao) == NULL)
 		throw "Valor invalido";
     *(a + posicao) = oque;
-	tamanho++;
+	tamanho++; a = (char*)malloc(tamanho * sizeof(char));
 }
 
 int String::getTamanho() {
