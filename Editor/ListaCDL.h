@@ -1,8 +1,14 @@
 #pragma once
+#include "stdafx.h"
+#include "String.h"
+#include "NoLista.h"
 class ListaCDL
 {
 protected:
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2ec1913a25be0c68412cc8093d499ca332d1eb20
 	NoLista *PosicaoAtual;
 public:
 	ListaCDL(NoLista primeiro);

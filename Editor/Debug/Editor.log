@@ -1,32 +1,16 @@
-﻿Build started 25/10/2016 08:05:15.
-     1>Project "Z:\EditorTexto\Editor\Editor.vcxproj" on node 2 (Build target(s)).
+﻿Build started 08/11/2016 09:36:23.
+     1>Project "C:\Users\u15157\Desktop\Projetao\EditorTexto\Editor\Editor.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Editor.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ListaCDL.cpp NoLista.cpp String.cpp
-         String.cpp
-     1>z:\editortexto\editor\string.cpp(1): warning C4627: '#include "String.h"': skipped when looking for precompiled header use
-                 Add directive to 'stdafx.h' or rebuild precompiled header
-     1>z:\editortexto\editor\string.cpp(7): error C2653: 'String' : is not a class or namespace name
-     1>z:\editortexto\editor\string.cpp(8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>z:\editortexto\editor\string.cpp(9): error C3861: 'malloc': identifier not found
-     1>z:\editortexto\editor\string.cpp(10): error C2355: 'this' : can only be referenced inside non-static member functions or non-static data member initializers
-     1>z:\editortexto\editor\string.cpp(10): error C2227: left of '->tamanho' must point to class/struct/union/generic type
-     1>z:\editortexto\editor\string.cpp(11): warning C4508: 'String' : function should return a value; 'void' return type assumed
-     1>z:\editortexto\editor\string.cpp(13): error C2653: 'String' : is not a class or namespace name
-     1>z:\editortexto\editor\string.cpp(13): fatal error C1903: unable to recover from previous error(s); stopping compilation
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Editor.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ListaCDL.cpp NoLista.cpp Pilha.cpp
+         Pilha.cpp
          NoLista.cpp
-     1>z:\editortexto\editor\nolista.h(7): error C2146: syntax error : missing ';' before identifier 'getinfoatual'
-     1>z:\editortexto\editor\nolista.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>z:\editortexto\editor\nolista.h(7): warning C4183: 'getinfoatual': missing return type; assumed to be a member function returning 'int'
-     1>z:\editortexto\editor\string.h(13): error C2535: 'int String::length(void)' : member function already defined or declared
-                 z:\editortexto\editor\string.h(10) : see declaration of 'String::length'
          ListaCDL.cpp
-     1>z:\editortexto\editor\listacdl.h(7): error C2143: syntax error : missing ';' before '*'
-     1>z:\editortexto\editor\listacdl.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>z:\editortexto\editor\string.h(13): error C2535: 'int String::length(void)' : member function already defined or declared
-                 z:\editortexto\editor\string.h(10) : see declaration of 'String::length'
          Generating Code...
-     1>Done Building Project "Z:\EditorTexto\Editor\Editor.vcxproj" (Build target(s)) -- FAILED.
+     1>c:\users\u15157\desktop\projetao\editortexto\editor\pilha.cpp(22): error C4716: 'Pilha::espie' : must return a value
+     1>c:\users\u15157\desktop\projetao\editortexto\editor\pilha.cpp(24): error C4716: 'Pilha::vazia' : must return a value
+     1>c:\users\u15157\desktop\projetao\editortexto\editor\pilha.cpp(23): error C4716: 'Pilha::cheia' : must return a value
+     1>Done Building Project "C:\Users\u15157\Desktop\Projetao\EditorTexto\Editor\Editor.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:04.22
+Time Elapsed 00:00:00.26

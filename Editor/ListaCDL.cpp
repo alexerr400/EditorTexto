@@ -4,7 +4,11 @@
 #include "NoLista.h"
 
 
+<<<<<<< HEAD
 ListaCDL::ListaCDL(NoLista primeiro)
+=======
+ListaCDL::ListaCDL()
+>>>>>>> 2ec1913a25be0c68412cc8093d499ca332d1eb20
 {
 	//fazer posicao atual receber primeiro no
 	*PosicaoAtual = primeiro;
